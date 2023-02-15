@@ -39,7 +39,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Log Out</a></li>
+                                <li><a class="dropdown-item" href="{{ route('actionlogout') }}">Log Out</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -28,3 +28,6 @@ Route::post('/register/action', [RegisterController::class, 'actionregister'])->
 
 Route::get('/todos/create', [TodoController::class, 'create'])->name('tambah-todo')->middleware('auth');
 Route::post('/todos/store', [TodoController::class, 'store'])->name('simpan-todo')->middleware('auth');
+Route::get('/todos/{id}/edit', [TodoController::class, 'edit'])->name('edit-todo')->middleware('auth');
+Route::post('/todos/{id}/update', [TodoController::class, 'update'])->name('update-todo')->middleware('auth');
+Route::get('/todos/{id}/delete', [TodoController::class, 'delete'])->name('delete-todo')->middleware('auth');
