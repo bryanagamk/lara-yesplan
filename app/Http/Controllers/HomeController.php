@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Todo;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('home');
+        $list = Todo::all();
+        return view('home', compact('list'));
     }
 }
